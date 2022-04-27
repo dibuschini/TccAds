@@ -36,53 +36,61 @@
                             <form class="needs-validation" method="post" novalidate action=@Url.Action("Create", "Login")>
                                 <div class="mb-3">
                                     <label for="useremail" class="form-label">Email</label>
-                                    <input type="email" class="form-control" id="UsrEmail" name="UsrEmail" placeholder="">
+                                    <input type="email" class="form-control" id="UsrEmail" name="UsrEmail" placeholder="" required>
                                     <div class="invalid-feedback">
-                                        Please Enter Email
+                                        Email é obrigatório
                                     </div>
                                 </div>
 
                                 <div class="mb-3">
                                     <label for="username" class="form-label">Usuário</label>
-                                    <input type="text" class="form-control" id="UsrNome" name="UsrNome" placeholder="">
+                                    <input type="text" class="form-control" id="UsrNome" name="UsrNome" placeholder="" required>
                                     <div class="invalid-feedback">
-                                        Please Enter Username
+                                        Usuário é obrigatório
                                     </div>
                                 </div>
 
                                 <div class="mb-3">
                                     <label for="userpassword" class="form-label">Senha</label>
-                                    <input type="password" class="form-control" id="UsrSenha" name="UsrSenha" placeholder="">
+                                    <input type="password" class="form-control" id="UsrSenha" name="UsrSenha" placeholder="" required>
                                     <div class="invalid-feedback">
-                                        Please Enter Password
+                                        Senha é obrigatório
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-lg-10">
                                         <div class="mb-3">
                                             <label for="formrow-inputCity" class="form-label">Rua</label>
-                                            <input type="text" class="form-control" id="UsrRua" name="UsrRua">
+                                            <input type="text" class="form-control" id="UsrRua" name="UsrRua" required>
+                                            <div class="invalid-feedback">
+                                                Rua é obrigatório
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="col-lg-2">
                                         <div class="mb-1">
                                             <label for="formrow-inputCity" class="form-label">Nº</label>
-                                            <input type="text" class="form-control" id="UsrNum" name="UsrNum">
+                                            <input type="text" class="form-control" id="UsrNum" name="UsrNum" required>
+                                           
                                         </div>
                                     </div>
                                     </div>
                                    
                                        
-                                            <div class="mb-3">
-                                                <label for="formrow-inputCity" class="form-label">Bairro</label>
-                                                <input type="text" class="form-control" id="UsrBairro" name="UsrBairro">
-                                            </div>
-                                       
-                                       
-                                            <div class="mb-3">
-                                                <label for="formrow-inputCity" class="form-label">Cidade</label>
-                                                <input type="text" class="form-control" id="UsrCidade" name="UsrCidade">
-                                            </div>
+                                <div class="mb-3">
+                                    <label for="formrow-inputCity" class="form-label">Bairro</label>
+                                    <input type="text" class="form-control" id="UsrBairro" name="UsrBairro" required>
+                                    <div class="invalid-feedback">
+                                        Bairro é obrigatório
+                                    </div>
+                                </div>                                                      
+                                <div class="mb-3">
+                                    <label for="formrow-inputCity" class="form-label">Cidade</label>
+                                    <input type="text" class="form-control" id="UsrCidade" name="UsrCidade" required>
+                                    <div class="invalid-feedback">
+                                        Cidade é obrigatório
+                                    </div>
+                                </div>
                                     
                                   
                                     <div class="mt-4 d-grid">

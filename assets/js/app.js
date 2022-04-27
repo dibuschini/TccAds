@@ -312,6 +312,6 @@ File: Main Js File
     $(document).ready(function () {
         init();
     })
-    
+
 
 })(jQuery)
