@@ -31,7 +31,7 @@ namespace TccAds.Controllers
             {
                 db.Usuarios.Add(usuarios);
                 db.SaveChanges();
-            
+                return RedirectToAction("Login");
             }
 
             return View(usuarios);

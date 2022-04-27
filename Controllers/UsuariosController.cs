@@ -47,7 +47,7 @@ namespace TccAds.Controllers
         // Para obter mais detalhes, confira https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,UsrNome,UsrEmail,UsrSenha,UsrData,UsrRua,UsrNum,UsrBairro,UsrCidade")] Usuarios usuarios)
+        public ActionResult Create([Bind(Include = "ID,UsrNome,UsrEmail,UsrSenha,UsrRua,UsrNum,UsrBairro,UsrCidade")] Usuarios usuarios)
         {
             if (ModelState.IsValid)
             {
@@ -79,7 +79,7 @@ namespace TccAds.Controllers
         // Para obter mais detalhes, confira https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,UsrNome,UsrEmail,UsrSenha,UsrData,UsrRua,UsrNum,UsrBairro,UsrCidade")] Usuarios usuarios)
+        public ActionResult Edit([Bind(Include = "ID,UsrNome,UsrEmail,UsrSenha,UsrRua,UsrNum,UsrBairro,UsrCidade")] Usuarios usuarios)
         {
             if (ModelState.IsValid)
             {

@@ -1,0 +1,75 @@
+﻿@model TccAds.Models.Usuarios
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Login/Cadastro.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Usuarios</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.UsrNome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UsrNome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UsrEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UsrEmail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UsrSenha)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UsrSenha)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UsrRua)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UsrRua)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UsrNum)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UsrNum)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UsrBairro)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UsrBairro)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UsrCidade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UsrCidade)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

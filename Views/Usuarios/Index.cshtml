@@ -1,0 +1,70 @@
+﻿@model IEnumerable<TccAds.Models.Usuarios>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Login/Cadastro.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.UsrNome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UsrEmail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UsrSenha)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UsrRua)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UsrNum)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UsrBairro)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UsrCidade)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.UsrNome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UsrEmail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UsrSenha)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UsrRua)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UsrNum)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UsrBairro)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UsrCidade)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>
