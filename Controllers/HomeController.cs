@@ -27,5 +27,10 @@ namespace TccAds.Controllers
             return View();
         }
 
+        public ActionResult Dashboard()
+        {
+            return View();
+        }
+
     }
 }

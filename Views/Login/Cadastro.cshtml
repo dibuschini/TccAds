@@ -1,8 +1,9 @@
-﻿@{
-    ViewData["Title"] = "Login";
+﻿
+@{
+    ViewData["Title"] = "Register";
     Layout = "~/Views/Shared/_BlankLayout.cshtml";
 }
-
+@model TccAds.Models.Usuarios
 <div class="account-pages my-5 pt-sm-5">
     <div class="container">
         <div class="row justify-content-center">
@@ -12,8 +13,8 @@
                         <div class="row">
                             <div class="col-7">
                                 <div class="text-primary p-4">
-                                    <h5 class="text-primary">Bem vindo de volta!</h5>
-                                    <p>Faça login para continuar.</p>
+                                    <h5 class="text-primary">Fazer Cadastro</h5>
+                                    <p>Faça seu cadastro agora!</p>
                                 </div>
                             </div>
                             <div class="col-5 align-self-end">
@@ -22,16 +23,8 @@
                         </div>
                     </div>
                     <div class="card-body pt-0">
-                        <div class="auth-logo">
-                            <a href=@Url.Action("Index", "Dashboard") class="auth-logo-light">
-                                <div class="avatar-md profile-user-wid mb-4">
-                                    <span class="avatar-title rounded-circle bg-light">
-                                        <img src="~/assets/images/logo-light.svg" alt="" class="rounded-circle" height="34">
-                                    </span>
-                                </div>
-                            </a>
-
-                            <a href=@Url.Action("Index", "Dashboard") class="auth-logo-dark">
+                        <div>
+                            <a href=@Url.Action("Index", "index")>
                                 <div class="avatar-md profile-user-wid mb-4">
                                     <span class="avatar-title rounded-circle bg-light">
                                         <img src="~/assets/images/logo.svg" alt="" class="rounded-circle" height="34">
@@ -40,34 +33,63 @@
                             </a>
                         </div>
                         <div class="p-2">
-                            <form class="form-horizontal" action=@Url.Action("Dashboard", "Home")>
+                            <form class="needs-validation" method="post" novalidate action=@Url.Action("Dashboard", "Login")>
 
+                              
                                 <div class="mb-3">
-                                    <label for="username" class="form-label">Usuário</label>
-                                    <input type="text" class="form-control" id="username" placeholder="Enter username">
-                                </div>
-
-                                <div class="mb-3">
-                                    <label class="form-label">Senha</label>
-                                    <div class="input-group auth-pass-inputgroup">
-                                        <input type="password" class="form-control" placeholder="Enter password" aria-label="Password" aria-describedby="password-addon">
-                                        <button class="btn btn-light " type="button" id="password-addon"><i class="mdi mdi-eye-outline"></i></button>
+                                    <label for="useremail" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="useremail" placeholder="">
+                                    <div class="invalid-feedback">
+                                        Please Enter Email
                                     </div>
                                 </div>
 
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="remember-check">
-                                    <label class="form-check-label" for="remember-check">
-                                        Remember me
-                                    </label>
+                                <div class="mb-3">
+                                    <label for="username" class="form-label">Usuário</label>
+                                    <input type="text" class="form-control" id="username" placeholder="">
+                                    <div class="invalid-feedback">
+                                        Please Enter Username
+                                    </div>
                                 </div>
 
-                                <div class="mt-3 d-grid">
-                                    <button class="btn btn-primary waves-effect waves-light" type="submit">Log In</button>
+                                <div class="mb-3">
+                                    <label for="userpassword" class="form-label">Senha</label>
+                                    <input type="password" class="form-control" id="senha" placeholder="">
+                                    <div class="invalid-feedback">
+                                        Please Enter Password
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="formrow-inputCity" class="form-label">Rua</label>
+                                    <input type="text" class="form-control" id="rua">
+                                </div>
+
+                                <div class="mb-1">
+                                    <label for="formrow-inputCity" class="form-label">Nº</label>
+                                    <input type="text" class="form-control" id="numero">
+                                </div>
+                            
+                                <div class="row">
+                                    <div class="col-lg-3">
+                                        <div class="mb-3">
+                                            <label for="formrow-inputCity" class="form-label">Bairro</label>
+                                            <input type="text" class="form-control" id="rua">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="mb-3">
+                                            <label for="formrow-inputCity" class="form-label">Cidade</label>
+                                            <input type="text" class="form-control" id="rua">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mt-4 d-grid">
+                                    <button class="btn btn-primary waves-effect waves-light" type="submit">Registrar</button>
                                 </div>
 
                                 <div class="mt-4 text-center">
-                                    <h5 class="font-size-14 mb-3">Sign in with</h5>
+                                    <h5 class="font-size-14 mb-3">Sign up using</h5>
 
                                     <ul class="list-inline">
                                         <li class="list-inline-item">
@@ -89,7 +111,7 @@
                                 </div>
 
                                 <div class="mt-4 text-center">
-                                    <a href=@Url.Action("Recoverpw", "Auth") class="text-muted"><i class="mdi mdi-lock me-1"></i> Forgot your password?</a>
+                                    <p class="mb-0">By registering you agree to the Skote <a href="#" class="text-primary">Terms of Use</a></p>
                                 </div>
                             </form>
                         </div>
@@ -99,7 +121,7 @@
                 <div class="mt-5 text-center">
 
                     <div>
-                        <p>Don't have an account ? <a href=@Url.Action("Register", "Auth") class="fw-medium text-primary"> Signup now </a> </p>
+                        <p>Already have an account ? <a href=@Url.Action("Index", "AuthLogin") class="fw-medium text-primary"> Login</a> </p>
                         <p>
                             ©
                             <script>document.write(new Date().getFullYear())</script> Skote. Crafted with <i class="mdi mdi-heart text-danger"></i> by Themesbrand
@@ -111,8 +133,9 @@
         </div>
     </div>
 </div>
-<!-- end account-pages -->
-@section scripts{
-    <!-- App js -->
-    <script src="~/assets/js/app.js"></script>
-}
+
+<!-- validation init -->
+<script src="~/assets/js/pages/validation.init.js"></script>
+
+<!-- App js -->
+<script src="~/assets/js/app.js"></script>
