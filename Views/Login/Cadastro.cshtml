@@ -71,19 +71,19 @@
                                         <div class="mb-1">
                                             <label for="formrow-inputCity" class="form-label">Nº</label>
                                             <input type="text" class="form-control" id="UsrNum" name="UsrNum" required>
-                                           
+
                                         </div>
                                     </div>
-                                    </div>
-                                   
-                                       
+                                </div>
+
+
                                 <div class="mb-3">
                                     <label for="formrow-inputCity" class="form-label">Bairro</label>
                                     <input type="text" class="form-control" id="UsrBairro" name="UsrBairro" required>
                                     <div class="invalid-feedback">
                                         Bairro é obrigatório
                                     </div>
-                                </div>                                                      
+                                </div>
                                 <div class="mb-3">
                                     <label for="formrow-inputCity" class="form-label">Cidade</label>
                                     <input type="text" class="form-control" id="UsrCidade" name="UsrCidade" required>
@@ -91,38 +91,38 @@
                                         Cidade é obrigatório
                                     </div>
                                 </div>
-                                    
-                                  
-                                    <div class="mt-4 d-grid">
-                                        <button class="btn btn-primary waves-effect waves-light" type="submit">Registrar</button>
-                                    </div>
 
-                                    <div class="mt-4 text-center">
-                                        <h5 class="font-size-14 mb-3">Sign up using</h5>
 
-                                        <ul class="list-inline">
-                                            <li class="list-inline-item">
-                                                <a href="javascript::void()" class="social-list-item bg-primary text-white border-primary">
-                                                    <i class="mdi mdi-facebook"></i>
-                                                </a>
-                                            </li>
-                                            <li class="list-inline-item">
-                                                <a href="javascript::void()" class="social-list-item bg-info text-white border-info">
-                                                    <i class="mdi mdi-twitter"></i>
-                                                </a>
-                                            </li>
-                                            <li class="list-inline-item">
-                                                <a href="javascript::void()" class="social-list-item bg-danger text-white border-danger">
-                                                    <i class="mdi mdi-google"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
+                                <div class="mt-4 d-grid">
+                                    <button class="btn btn-primary waves-effect waves-light" type="submit">Registrar</button>
+                                </div>
 
-                                    <div class="mt-4 text-center">
-                                        <p class="mb-0">By registering you agree to the Skote <a href="#" class="text-primary">Terms of Use</a></p>
-                                    </div>
-</form>
+                                <div class="mt-4 text-center">
+                                    <h5 class="font-size-14 mb-3">Sign up using</h5>
+
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item">
+                                            <a href="javascript::void()" class="social-list-item bg-primary text-white border-primary">
+                                                <i class="mdi mdi-facebook"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a href="javascript::void()" class="social-list-item bg-info text-white border-info">
+                                                <i class="mdi mdi-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a href="javascript::void()" class="social-list-item bg-danger text-white border-danger">
+                                                <i class="mdi mdi-google"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="mt-4 text-center">
+                                    <p class="mb-0">By registering you agree to the Skote <a href="#" class="text-primary">Terms of Use</a></p>
+                                </div>
+                            </form>
                         </div>
 
                     </div>
@@ -142,9 +142,9 @@
         </div>
     </div>
 </div>
-
-<!-- validation init -->
-<script src="~/assets/js/pages/validation.init.js"></script>
-
-<!-- App js -->
-<script src="~/assets/js/app.js"></script>
+@section scripts{
+    <!-- validation init -->
+    <script src="~/assets/js/pages/validation.init.js"></script>
+    <!-- App js -->
+    <script src="~/assets/js/app.js"></script>
+    }

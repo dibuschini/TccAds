@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -31,9 +32,15 @@ namespace TccAds.Controllers
             {
                 db.Usuarios.Add(usuarios);
                 db.SaveChanges();
+                var msg = new
+                {
+                    message = "Inserido com sucesso",
+                    title = "success"
+                };
+                TempData["Message"] = JsonConvert.SerializeObject(msg);
                 return RedirectToAction("Login");
             }
-
+            
             return View(usuarios);
         }
     }
