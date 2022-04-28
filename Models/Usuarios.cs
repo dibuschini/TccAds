@@ -15,5 +15,6 @@ namespace TccAds.Models
         public int UsrNum { get; set; }
         public string UsrBairro { get; set; }
         public string UsrCidade { get; set; }
+        public IEnumerable<object> Usuarios { get; internal set; }
     }
 }
