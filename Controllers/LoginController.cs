@@ -24,7 +24,12 @@ namespace TccAds.Controllers
             return View();
         }
 
-      
+        public ActionResult Recuperar()
+        {
+            return View();
+        }
+
+
 
         public ActionResult Create([Bind(Include = "ID,UsrNome,UsrEmail,UsrSenha,UsrData,UsrRua,UsrNum,UsrBairro,UsrCidade")] Usuarios usuarios)
         {
