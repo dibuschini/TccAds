@@ -37,12 +37,9 @@ namespace TccAds.Controllers
             {
                 db.Usuarios.Add(usuarios);
                 db.SaveChanges();
-                var msg = new
-                {
-                    message = "Inserido com sucesso",
-                    title = "success"
-                };
-                TempData["Message"] = JsonConvert.SerializeObject(msg);
+                ViewBag.Message = "Your Message";
+               
+              
                 return RedirectToAction("Login");
             }
             
