@@ -32,5 +32,13 @@ namespace TccAds.Controllers
             return View();
         }
 
+        public ActionResult Cadastrado()
+        {
+           
+            TempData["data"] = "Teste";
+          
+            return View(TempData["data"]);
+        }
+
     }
 }
