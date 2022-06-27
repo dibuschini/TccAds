@@ -1,0 +1,88 @@
+﻿@model TccAds.Models.Usuarios
+
+@{
+    ViewBag.Title = "Form Layouts";
+    ViewBag.pTitle = "Form Layouts";
+    ViewBag.pageTitle = "Forms";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+    <div class="col-xl-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title mb-4">Form Grid Layout</h4>
+
+                <form>
+                    <div class="mb-3">
+                        <h3></h3>
+                        <label for="formrow-firstname-input" class="form-label">Nome</label>
+                        <input type="text" class="form-control" id="produtos" name="produtos">
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="formrow-email-input" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="formrow-email-input">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="formrow-password-input" class="form-label">Senha</label>
+                                <input type="password" class="form-control" id="formrow-password-input">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="mb-3">
+                                <label for="formrow-inputCity" class="form-label">Cidade</label>
+                                <input type="text" class="form-control" id="formrow-inputCity">
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="mb-3">
+                                <label for="formrow-inputCity" class="form-label">Bairro</label>
+                                <input type="text" class="form-control" id="formrow-inputCity">
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="mb-3">
+                                <label for="formrow-inputCity" class="form-label">Rua</label>
+                                <input type="text" class="form-control" id="formrow-inputCity">
+                            </div>
+                        </div>
+
+                        <div class="col-lg-1">
+                            <div class="mb-3">
+                                <label for="formrow-inputZip" class="form-label">Nº</label>
+                                <input type="text" class="form-control" id="formrow-inputZip">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div>
+                        <button type="submit" class="btn btn-primary w-md">Submit</button>
+                    </div>
+                </form>
+            </div>
+            <!-- end card body -->
+        </div>
+        <!-- end card -->
+    </div>
+    <!-- end col -->
+
+    
+<!-- end row -->
+@section scripts{
+    <script src="~/assets/js/app.js"></script>
+}
+
+
+
+
+

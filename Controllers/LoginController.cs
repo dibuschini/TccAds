@@ -37,8 +37,7 @@ namespace TccAds.Controllers
             {
                 db.Usuarios.Add(usuarios);
                 db.SaveChanges();
-                ViewBag.Message = "Your Message";
-               
+                             
               
                 return RedirectToAction("Login");
             }
